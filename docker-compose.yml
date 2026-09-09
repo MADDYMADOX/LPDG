@@ -1,0 +1,9 @@
+services:
+  predict:
+    build: .
+    volumes:
+      - ./data:/app/data:ro
+      - ./:/app/out
+    environment:
+      - DATA_DIR=/app/data
+      - OUT_FILE=/app/out/predictions.csv

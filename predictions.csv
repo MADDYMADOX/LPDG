@@ -1,0 +1,121 @@
+week_start,rank,gateway_id,score,reason
+2026-02-02,1,0A2778A31BE3,0.82,43h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.40).
+2026-02-02,2,06F49BD8F572,0.621578,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.66).
+2026-02-02,3,0E1B6F4DBA34,0.572475,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.50).
+2026-02-02,4,064AED1EC0AA,0.560948,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.46).
+2026-02-02,5,0AB6B45C775A,0.49338,16h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.78).
+2026-02-02,6,0A4E33E2692B,0.464904,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.36).
+2026-02-02,7,06F2CDBD2C41,0.447302,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.46).
+2026-02-02,8,0EF023E6452D,0.443931,23h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-02,9,0A7AC5BDAF86,0.389466,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-02,10,06FFEC2EFA5E,0.38882,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-02,11,0A6324E3E043,0.38751,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-02,12,02423E0E6E9F,0.385401,9h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.80).
+2026-02-02,13,0AA473D2FC17,0.353799,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-02,14,0EE09EDA649F,0.352739,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-02,15,02314F9A9168,0.35214,8h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.74).
+2026-02-09,1,0A68F38A6ACF,0.738462,40h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,2,0228A99EE35A,0.617314,34h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,3,0AA296FF247D,0.467967,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-09,4,0AB6B45C775A,0.460415,13h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.78).
+2026-02-09,5,02097AB58D3C,0.449881,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-09,6,0A4E33E2692B,0.439265,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.36).
+2026-02-09,7,0A3983033084,0.428967,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,8,0E9DC914D8DF,0.41793,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,9,0E55F28AB569,0.412879,10h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots); recent meter-read success also below plan (risk 0.79).
+2026-02-09,10,0A1FB1C98A92,0.399561,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-09,11,06D6B7018E15,0.389069,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-09,12,0A7AC5BDAF86,0.377664,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,13,0A6324E3E043,0.361871,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-02-09,14,0A71A6F9D6C6,0.349704,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-09,15,06C0D5E3BCDB,0.347799,7h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.75).
+2026-02-16,1,0A4673793B3E,0.710109,38h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-16,2,0AA296FF247D,0.672441,32h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-16,3,0228A99EE35A,0.667051,35h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-02-16,4,065B928716CD,0.622442,31h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-16,5,0A68F38A6ACF,0.591093,30h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-16,6,02D49A34B2FE,0.57799,29h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-02-16,7,0A4E33E2692B,0.567291,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots); recent meter-read success also below plan (risk 0.36).
+2026-02-16,8,0E69C64B6E57,0.480092,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-16,9,0A6324E3E043,0.471476,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-16,10,0E1B6F4DBA34,0.443956,16h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots); recent meter-read success also below plan (risk 0.50).
+2026-02-16,11,06F170E6BB03,0.43797,23h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-16,12,0A7AAFDD9E11,0.420108,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-16,13,06F49BD8F572,0.419375,12h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.66).
+2026-02-16,14,0A68DF0B3D07,0.418619,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-16,15,0E9DC914D8DF,0.417009,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,1,0228A99EE35A,0.722314,39h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,2,06238EE3BE6C,0.697841,38h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,3,0A4E33E2692B,0.573431,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots); recent meter-read success also below plan (risk 0.36).
+2026-02-23,4,02D7623552C8,0.560011,28h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,5,0E1D7CA1DB0C,0.540513,29h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,6,0EF023E6452D,0.536179,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,7,0AA473D2FC17,0.512833,27h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,8,0E3D96237639,0.482768,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,9,060EE3CB4779,0.474805,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,10,0E69C64B6E57,0.468283,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,11,0A800188C20F,0.436784,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,12,02D49A34B2FE,0.420703,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,13,0ABC8E60F4C1,0.396011,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-02-23,14,065B928716CD,0.392415,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-02-23,15,0A6324E3E043,0.388345,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,1,024DD3A9ADCA,0.798592,29h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.41).
+2026-03-02,2,0EF023E6452D,0.769512,30h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,3,028B24EADDAD,0.748262,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.55).
+2026-03-02,4,0E5303C82FCB,0.693053,29h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,5,0228A99EE35A,0.582314,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,6,0EE071F7B24A,0.577958,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,7,0A8407CF4D85,0.53685,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,8,0A800188C20F,0.531912,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,9,02E12310186C,0.528389,15h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.59).
+2026-03-02,10,02D49A34B2FE,0.510447,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,11,0E121B6B8661,0.464531,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-02,12,0E1D7CA1DB0C,0.463333,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-02,13,060EE3CB4779,0.446087,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,14,021406F56396,0.443964,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-02,15,0AA4B065E5A5,0.4296,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,1,024DD3A9ADCA,0.793925,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.41).
+2026-03-09,2,0ABC8E60F4C1,0.737037,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-03-09,3,028B24EADDAD,0.724929,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.55).
+2026-03-09,4,06AEE181F595,0.720735,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,5,0A6324E3E043,0.701371,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,6,029DA26B1A92,0.687138,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,7,0E5303C82FCB,0.660387,23h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,8,02F5CE7705EC,0.657566,23h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,9,02E12310186C,0.654389,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.59).
+2026-03-09,10,02075B45BF24,0.63963,22h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,11,06C77FEA9550,0.613,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-09,12,06F170E6BB03,0.602286,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-03-09,13,0E41CF7F74D5,0.522947,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-09,14,0E2DEE345837,0.516595,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-09,15,0257E855DBCE,0.5036,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,1,0A182EFD3C61,0.743548,40h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,2,060C5773A61B,0.496379,26h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-16,3,028B24EADDAD,0.462429,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline); recent meter-read success also below plan (risk 0.55).
+2026-03-16,4,0A6324E3E043,0.396871,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,5,02E12310186C,0.388389,12h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.59).
+2026-03-16,6,0ABC8E60F4C1,0.387037,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,7,0A268A7E40CD,0.368293,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,8,0E55F28AB569,0.360379,7h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.79).
+2026-03-16,9,0656377B3078,0.357143,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,10,02F5CE7705EC,0.346066,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-16,11,06DAF11BD38F,0.339127,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,12,06AEE181F595,0.335735,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,13,0230EEF72435,0.332521,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-16,14,0E752F1B295C,0.332159,15h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-03-16,15,0A184A2E46B7,0.32625,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-23,1,0687F36E02C6,0.735762,28h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,2,0E121B6B8661,0.669531,25h beyond 3σ of its own 28-day baseline in the last 7 days (worst: reboots).
+2026-03-23,3,060C5773A61B,0.641379,24h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,4,0A182EFD3C61,0.618548,23h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-23,5,021406F56396,0.548964,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-23,6,02F5CE7705EC,0.538566,21h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,7,0230D261A1CD,0.52875,20h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,8,0E55F28AB569,0.512879,11h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections); recent meter-read success also below plan (risk 0.79).
+2026-03-23,9,0EE587927263,0.5,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,10,0ABE42BE4165,0.492568,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,11,0EE51B79E853,0.488918,19h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,12,06AEE181F595,0.470735,18h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-23,13,0E5A9CEA8093,0.452049,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
+2026-03-23,14,0217820BFFB2,0.45,16h beyond 3σ of its own 28-day baseline in the last 7 days (worst: time spent offline).
+2026-03-23,15,0EF47B410B41,0.443613,17h beyond 3σ of its own 28-day baseline in the last 7 days (worst: backhaul disconnections).
