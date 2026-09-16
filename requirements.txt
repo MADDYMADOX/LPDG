@@ -1,5 +1,14 @@
-pandas>=2.2
-numpy>=1.26
-pyarrow>=14
-openpyxl>=3.1
-pytest>=7.4
+# Pinned to exactly the versions this submission was developed and tested
+# against, so the environment you get is the environment we ran. Tested on
+# CPython 3.14.7; pandas 3.x needs Python >= 3.11.
+# Needed to produce predictions.csv:
+pandas==3.0.5
+numpy==2.5.3
+pyarrow==25.0.1
+openpyxl==3.1.5
+
+# Needed only to re-run the tests and regenerate REPORT.md's charts. Listed
+# here rather than in a second file so one install makes everything in the
+# README work.
+pytest==9.1.1
+matplotlib==3.11.2

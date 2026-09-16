@@ -1,12 +1,11 @@
-import pathlib
-
 import pytest
 
 from src.io import DataQualityError, load_gateway_master, load_field_visits
 
-DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
+from .conftest import DATA, requires_dataset
 
 
+@requires_dataset
 def test_gateway_master_loads_despite_latin1_encoding():
     """Regression test for the bug we actually hit: gateway_master.csv is
     Latin-1, not UTF-8. A naive pd.read_csv(path) raises UnicodeDecodeError
@@ -23,11 +22,13 @@ def test_gateway_master_missing_file_raises_data_quality_error(tmp_path):
         load_gateway_master(tmp_path)
 
 
+@requires_dataset
 def test_gateway_master_no_duplicate_gateways():
     frame = load_gateway_master(DATA)
     assert not frame["gateway_id"].duplicated().any()
 
 
+@requires_dataset
 def test_field_visits_loads_and_parses_dates():
     frame = load_field_visits(DATA)
     assert frame["requested_on"].notna().all()

@@ -1,0 +1,11 @@
+# Later rules win, so the general default comes first and the overrides follow.
+* text=auto
+
+*.png binary
+*.parquet binary
+*.xlsx binary
+
+# Keep the submission byte-identical whatever platform it is checked out on.
+# The pipeline writes LF explicitly (src/predict.py), so without this a Windows
+# checkout would rewrite it to CRLF and show a clean re-run as a modification.
+predictions.csv -text

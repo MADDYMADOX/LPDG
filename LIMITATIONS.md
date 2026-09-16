@@ -39,6 +39,15 @@ two-thirds of that ceiling (26% baseline -> 34% blended, against a ~40%
 ceiling). The bigger lever for the ops manager may be visit capacity itself,
 which is outside this challenge's scope but worth saying plainly.
 
+**We re-pick gateways we picked last week, and cannot tell whether that is
+waste.** 37 of the 105 consecutive-week slots in the submission are repeat
+picks. Under the scorer's episode accounting, a repeat inside an episode we
+already caught earns nothing and still costs €380 and one of the 15 slots. We
+have no way to separate "still the same unfixed fault" from "a new episode"
+with the data given, and our backtest scores weeks independently so it cannot
+referee a cooldown rule either. Quantified rather than smoothed over; the
+reasoning is in `DECISIONS.md` §5.
+
 **One hardware model, one unit.** `GW-8800X` appears exactly once in
 `gateway_master.csv`. Our per-gateway z-score approach doesn't need peers
 (it compares each gateway to its own history), so this isn't a bug we found
@@ -53,20 +62,26 @@ firmware rollout that hasn't happened yet in this data.
 
 ## What another two weeks would buy
 
-1. **Time-gated use of `engineer_review_2026-02.xlsx`.** It's unusable for
+1. **Visit outcomes fed back per gateway-week**, so "did the read ratio
+   recover after this visit" becomes measurable. That is the missing input
+   that turns the repeat-pick question above from a judgement call into a
+   one-parameter decision (how many weeks to suppress a gateway for), and it
+   is the single change that would move the most money. First, because
+   everything else on this list is smaller.
+2. **Time-gated use of `engineer_review_2026-02.xlsx`.** It's unusable for
    the first two scored weeks (leakage), but legitimately available from
    2026-02-16 onward — we did not integrate it at all, for consistency
    across weeks. A version that switches it on only where it's temporally
    valid would likely sharpen the later weeks.
-2. **An uplift/causal check on the visit-lag data** — using the variation in
+3. **An uplift/causal check on the visit-lag data** — using the variation in
    `requested_on` -> `visited_on` gaps in `field_visits.csv` to estimate how
    much of a read-ratio recovery is actually attributable to a visit versus
    the problem resolving on its own, which would directly test the
    assumption the whole cost model rests on.
-3. **A live weekly meter-feed**, instead of a frozen export, so the
+4. **A live weekly meter-feed**, instead of a frozen export, so the
    meter-trend term stays a real signal through the whole scored window
    rather than freezing after week 1.
-4. **Formal hazard/survival modelling per gateway** in place of the 3-sigma
+5. **Formal hazard/survival modelling per gateway** in place of the 3-sigma
    heuristic, if a longer labeled history were available — the current
    method was chosen partly because ~20-26 weeks of data doesn't comfortably
    support anything more complex without overfitting risk.

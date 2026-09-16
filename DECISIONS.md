@@ -1,6 +1,8 @@
 # Decisions
 
-Five choices, what else was on the table, and why we didn't take it.
+Five choices, what else was on the table, and why we didn't take it — plus a
+sixth (§5, repeat picks) that round-two FAQ 4.1 asked candidates to take a
+position on.
 
 ## 1. Part 2 track: Data science
 
@@ -88,7 +90,42 @@ correction) and spent the search budget on checking robustness across
 *different ground-truth definitions* instead of squeezing the last point of
 precision out of one definition.
 
-## 5. Data-quality handling: fail loudly, per file, never guess once for all
+## 5. Re-picking a gateway we picked last week: left in, deliberately
+
+**Chosen:** No cooldown. Each week is ranked independently, so a gateway that
+still looks bad can be picked again the following week.
+
+**What that costs us, measured:** across the 8 submitted weeks, 37 of the 105
+consecutive-week slots are repeat picks — about 5 of each week's 15. One
+gateway appears in 6 of the 8 weeks; 73 distinct gateways fill the 120 slots.
+Under the scorer's episode accounting, any of those repeats that falls inside
+a fault episode we already caught earns nothing and still costs €380 and a
+slot. That is real exposure and we are not going to pretend otherwise.
+
+**Alternative considered:** suppress any gateway picked in the last *k* weeks
+and promote the next-ranked candidate.
+
+**Why not:** we cannot tell, from the data we are given, whether a repeat is a
+wasted second visit inside one episode or a correct catch of a new episode —
+episode boundaries are in the held-out ground truth, and our own telemetry
+does not react to visits, so a gateway we "fixed" in week 2 looks exactly as
+broken in week 3. Worse, our backtest cannot referee this: it scores each
+week independently against the read-ratio proxy, so a gateway that is
+genuinely still failing counts as a hit every week, and a cooldown would
+score as a pure loss there regardless of whether it is the right operational
+call. Adding a rule we could neither justify from the data nor honestly test
+would be optimising against a measurement we do not trust — the exact thing
+the brief warns about.
+
+**What would decide it:** the outcome feedback we do not have — visit
+outcomes joined back per gateway-week, so "did the read ratio recover after
+this visit" becomes measurable and the episode length becomes estimable.
+With that, the cooldown *k* is a one-parameter decision with a number behind
+it. Without it, the honest position is a documented, quantified exposure
+rather than a guess. This is the first thing we would spend the next two
+weeks on (see `LIMITATIONS.md`).
+
+## 6. Data-quality handling: fail loudly, per file, never guess once for all
 
 **Chosen:** Each loader in `src/io.py` validates its own assumptions about
 its file (encoding, required columns, no duplicate gateway IDs, no negative
