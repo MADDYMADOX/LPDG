@@ -60,7 +60,7 @@ on.
 
 ## A smaller one, during development
 
- an early version of the
+An early version of the
 backtest script passed an already-timezone-aware `pandas.Timestamp` into
 `pd.Timestamp(monday, tz="UTC")`, which raises (`Cannot pass a datetime or
 Timestamp with tzinfo with the tz parameter`) — a real bug that surfaced

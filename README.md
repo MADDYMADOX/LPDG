@@ -5,10 +5,6 @@ Which 15 gateways to visit each week, and why.
 
 ## Walkthrough recording
 
-<!-- REPLACE THE LINE BELOW WITH YOUR UNLISTED YOUTUBE / VIMEO / DRIVE LINK.
-     Test it in a private browser window first: a link that needs an access
-     request counts as no recording. -->
-
 **▶ 6–8 minute walkthrough: _link to be added_**
 
 What is in it: the ranking method and why it is not a trained model, the
