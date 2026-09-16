@@ -38,7 +38,29 @@ explanation, which is why `src/io.py` now decodes `gateway_master.csv` with
 `encoding="latin-1"` explicitly and documents why, rather than silently
 coercing or dropping anything.
 
-A second, smaller example during development: an early version of the
+## A second thing it got wrong, caught on the last day
+
+Preparing the walkthrough, I asked it to check the figures I was about to say
+out loud. One of them — "53% of gateways have zero variance in `reboot_cnt`
+over any 28-day window" — did not reproduce. 53.3% is real, but it is the
+value at *one* window (28 days before 2025-12-01); the share is 44.6% early in
+the history and **69.8% across the eight scored Mondays**, the window that
+actually matters. The original number had been measured once and then written
+up as though it were a constant, with "any 28-day window" doing the work.
+
+That is the failure mode the brief calls claiming more than you measured, and
+it would not have survived a reviewer recomputing it. The fix was to stop
+quoting a single figure and commit the check instead:
+`scripts/zero_variance_check.py` prints the share per metric per window, which
+also surfaced something the single number had hidden — the blind spot is
+specific to `reboot_cnt` (69.8%), while `offline_duration_sec` and
+`disconnection_cnt` sit at 1.5%. That sharpens the point rather than weakening
+it: the metric the given baseline leans on hardest is the one it is blindest
+on.
+
+## A smaller one, during development
+
+ an early version of the
 backtest script passed an already-timezone-aware `pandas.Timestamp` into
 `pd.Timestamp(monday, tz="UTC")`, which raises (`Cannot pass a datetime or
 Timestamp with tzinfo with the tz parameter`) — a real bug that surfaced

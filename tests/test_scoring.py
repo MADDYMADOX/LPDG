@@ -54,6 +54,27 @@ def test_trailing_meter_risk_excludes_target_week():
     assert risk["GW1"] == pytest.approx(1 - (0.90 + 0.95) / 2)
 
 
+def test_tied_scores_are_broken_deterministically_by_gateway_id():
+    """FAQ 3.6: two runs that disagree about the order of tied rows is a bug.
+    Three gateways with identical telemetry must tie on score and come back in
+    gateway_id order -- not in whatever order the dataframe library produced,
+    which is not stable across pandas versions."""
+    monday = dt.date(2026, 2, 2)
+    rows = [
+        {"gateway_id": gw, "ts": f"2026-01-{d:02d}T00:00:00Z",
+         "offline_duration_sec": 10 + d, "disconnection_cnt": 1, "reboot_cnt": 0}
+        # deliberately not in sorted order, so a stable sort alone would not
+        # be enough to produce the expected answer
+        for gw in ("GW_C", "GW_A", "GW_B")
+        for d in range(5, 32)
+    ]
+    empty_mrs = pd.DataFrame(columns=["gateway_id", "week_start", "read_ratio"])
+    scored = blended_scores_for_week(_telemetry(rows), empty_mrs, monday)
+
+    assert scored["blended_score"].nunique() == 1, "fixture should produce a tie"
+    assert list(scored["gateway_id"]) == ["GW_A", "GW_B", "GW_C"]
+
+
 def test_blended_scores_handle_gateway_with_no_meter_history():
     """A gateway absent from meter_read_success.csv must not crash the
     pipeline or silently score as 'perfectly healthy' (risk=0 would be an

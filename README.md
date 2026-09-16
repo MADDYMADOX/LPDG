@@ -128,9 +128,13 @@ clone. With the data present, all 12 pass.
 1. `gateway_master.csv` is Latin-1, not UTF-8. A default `pd.read_csv` on a
    strict-UTF-8 host (e.g. Linux CI) raises `UnicodeDecodeError` before you
    produce a single row. `src/io.py` decodes it explicitly.
-2. `baseline_3sigma.py`'s method has a blind spot: 53% of gateways have zero
-   variance in `reboot_cnt` over any 28-day window, so `std=0` propagates to
-   `NaN` and that gateway can never be flagged on that metric, however badly it
-   fails. See `LIMITATIONS.md`.
+2. `baseline_3sigma.py`'s method has a blind spot: most gateways have **zero
+   variance** in `reboot_cnt` over a 28-day window, so the standard deviation
+   is 0, the z-score is undefined, and that gateway can never be flagged on
+   that metric however badly it fails. How many depends on when you look —
+   45% at the start of the history, rising to **69.8% across the scored
+   window** (68.8–70.9% at the eight scored Mondays). It is specific to
+   `reboot_cnt`: the other two metrics sit at 1.5%. Reproduce with
+   `python scripts/zero_variance_check.py`.
 
 Full reasoning in `DECISIONS.md` and `REPORT.md`.

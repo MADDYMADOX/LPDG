@@ -57,7 +57,14 @@ def run_backtest(data_dir: pathlib.Path, bad_ratios=(0.5, 0.6, 0.7, 0.8)) -> pd.
         blended = blended_scores_for_week(telemetry, mrs, wk_ts.date())
         if sigma_only.empty or blended.empty:
             continue
-        top15_sigma = set(sigma_only.sort_values("flagged_hours", ascending=False).head(VISITS_PER_WEEK)["gateway_id"])
+        # Same explicit tie-break as the blended ranking, so the baseline is
+        # compared on equal terms and neither side's number moves because a
+        # library changed how it orders equal keys.
+        top15_sigma = set(
+            sigma_only.sort_values(
+                ["flagged_hours", "gateway_id"], ascending=[False, True], kind="stable"
+            ).head(VISITS_PER_WEEK)["gateway_id"]
+        )
         top15_blend = set(blended.head(VISITS_PER_WEEK)["gateway_id"])
 
         truth_week = mrs[mrs["week_start"] == wk_ts]

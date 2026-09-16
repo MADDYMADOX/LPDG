@@ -133,7 +133,17 @@ def blended_scores_for_week(
     fh_norm = (fh - fh.min()) / span if span > 0 else fh * 0
     flagged["flagged_hours_norm"] = fh_norm
     flagged["blended_score"] = w_telemetry * fh_norm + w_meter * flagged["meter_risk"]
-    return flagged.reset_index().sort_values("blended_score", ascending=False)
+    # Tie-break explicitly on gateway_id. flagged_hours is a small integer, so
+    # blended scores tie often -- up to 12 duplicate scores inside a single
+    # week's top 15. Sorting on score alone leaves those in whatever order the
+    # dataframe library happens to produce, which is not stable across pandas
+    # versions: the baseline comparison in scripts/backtest.py visibly shifted
+    # when pandas went 2.x -> 3.x. gateway_id is arbitrary but fixed, which is
+    # the property that matters. No tie currently spans the rank-15 cutoff, so
+    # this fixes the ordering without changing which gateways are selected.
+    return flagged.reset_index().sort_values(
+        ["blended_score", "gateway_id"], ascending=[False, True], kind="stable"
+    )
 
 
 def build_reason(row: pd.Series) -> str:

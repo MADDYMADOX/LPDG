@@ -90,6 +90,28 @@ correction) and spent the search budget on checking robustness across
 *different ground-truth definitions* instead of squeezing the last point of
 precision out of one definition.
 
+## 4b. Tie-break: gateway_id, ascending, explicitly
+
+**Chosen:** sort by `blended_score` descending, then `gateway_id` ascending,
+with a stable sort.
+
+**Alternative considered:** sort on score alone and let the library settle
+equal rows.
+
+**Why not:** `flagged_hours` is a small integer, so scores tie constantly —
+up to 12 duplicate scores inside a single week's top 15. Sorting on score
+alone leaves those rows in whatever order pandas happens to produce, and that
+is not stable across versions: upgrading pandas 2.x → 3.x visibly moved the
+baseline's `sigma_hits` in `scripts/backtest_results.csv` without a line of
+our code changing. `gateway_id` is arbitrary, but it is *fixed*, which is the
+only property a tie-break needs. Regression test:
+`test_tied_scores_are_broken_deterministically_by_gateway_id`.
+
+Worth saying precisely, because it bounds the risk: **no tie spans the rank-15
+cutoff in any of the eight submitted weeks**, so the tie-break never decides
+*which* gateways are visited — only the order they are listed in. Adding it
+left `predictions.csv` byte-for-byte identical.
+
 ## 5. Re-picking a gateway we picked last week: left in, deliberately
 
 **Chosen:** No cooldown. Each week is ranked independently, so a gateway that
