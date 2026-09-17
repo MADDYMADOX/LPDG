@@ -5,7 +5,7 @@ Which 15 gateways to visit each week, and why.
 
 ## Walkthrough recording
 
-**▶ 6–8 minute walkthrough: _link to be added_**
+**▶ 6–8 minute walkthrough**
 
 What is in it: the ranking method and why it is not a trained model, the
 leak-free backtest behind `REPORT.md`, the two real bugs in this data, and a
